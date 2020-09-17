@@ -35,7 +35,7 @@ function Ship() {
 
   this.render = function() {
     push();
-    noFill();
+    fill(0);
     stroke(255);
     translate(this.pos.x, this.pos.y)
     rotate(this.heading + PI / 2);
