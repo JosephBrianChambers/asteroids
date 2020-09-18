@@ -33,6 +33,12 @@ function Ship() {
     this.vel.mult(0.99);
   }
 
+  this.hits = function(asteroid) {
+    var distance = dist(this.pos.x, this.pos.y, asteroid.pos.x, asteroid.pos.y);
+
+    return distance < this.r + asteroid.r
+  }
+
   this.render = function() {
     push();
     fill(0);
